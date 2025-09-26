@@ -4,10 +4,13 @@
   "description": "",
   "main": "dist/demo.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc -p tsconfig.node.json",
     "start": "npm run build && node dist/demo.js",
     "dev": "ts-node demo.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "web": "vite",
+    "build:web": "vite build",
+    "preview": "vite preview"
   },
   "keywords": [],
   "author": "",
@@ -16,13 +19,20 @@
   "dependencies": {
     "@babel/core": "^7.28.4",
     "@babel/preset-typescript": "^7.27.1",
-    "@babel/types": "^7.28.4"
+    "@babel/types": "^7.28.4",
+    "@babel/standalone": "^7.26.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@types/babel__core": "^7.20.5",
     "@types/babel-types": "^7.0.16",
     "@types/node": "^22.0.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
     "ts-node": "^10.9.2",
-    "typescript": "^5.5.4"
+    "typescript": "^5.5.4",
+    "vite": "^5.4.1"
   }
 }
